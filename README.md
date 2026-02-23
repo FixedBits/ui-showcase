@@ -17,14 +17,6 @@ This project focuses on layout, spacing, component structure, and subtle motion 
 - CSS
 - JavaScript
 
-## Live Demo
-
-(Coming soon)
-
-## Screenshots
-
-_Will add screenshots once deployed_
-
 ## Running the Project
 
 Clone the repository and open `index.html` in your browser.
