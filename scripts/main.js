@@ -2,25 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroElements = document.querySelectorAll(".hero .animate-init");
   const scrollElements = document.querySelectorAll("#components .animate-init, footer .animate-init");
 
-  // HERO: animate immediately with stagger
+  // Hero: animate immediately with stagger
   heroElements.forEach((el, index) => {
     setTimeout(() => {
       el.classList.add("animate-active");
     }, index * 200);
   });
 
-  // GRID + FOOTER: animate only when visible
+  // Scroll-triggered animations (grid + footer)
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("animate-active");
 
-        // Animate the bar AFTER the card fade-in finishes
+        // Premium bar: animate after fade-in
         const bar = entry.target.querySelector(".premium-bar-fill");
         if (bar) {
           setTimeout(() => {
             bar.style.width = "70%";
-          }, 700); // fade-in is 600ms, so 700ms is perfect
+          }, 700);
         }
 
         observer.unobserve(entry.target);
@@ -28,6 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Observe ONLY scroll-triggered elements
+  // Observe scroll-triggered elements
   scrollElements.forEach((el) => observer.observe(el));
 });
