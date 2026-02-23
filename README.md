@@ -30,5 +30,5 @@ _Will add screenshots once deployed_
 Clone the repository and open `index.html` in your browser.
 
 ```bash
-git clone https://github.com/yourusername/ui-showcase.git
+git clone https://github.com/fixedbits/ui-showcase.git
 ```
