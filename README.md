@@ -23,7 +23,7 @@ This project focuses on layout, spacing, component structure, and subtle motion 
 
 ## Screenshots
 
-_Add screenshots once deployed_
+_Will add screenshots once deployed_
 
 ## Running the Project
 
