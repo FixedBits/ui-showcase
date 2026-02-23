@@ -59,11 +59,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh; /* hero fills first viewport */
+  min-height: 100vh;
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 24px; /* horizontal padding only */
+  padding: 0 24px;
 }
 
 .hero-title {
@@ -107,6 +107,7 @@ body {
   text-align: center;
   margin-bottom: var(--space-lg);
 }
+
 .section-title::after {
   content: "";
   position: absolute;
@@ -126,12 +127,14 @@ body {
   border-radius: var(--radius-md);
   background: #ffffff;
 }
+
 /* GRID LAYOUT */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--space-lg);
 }
+
 .component-card {
   background: #ffffff;
   padding: var(--space-lg);
@@ -141,8 +144,8 @@ body {
   text-align: center;
   font-weight: 500;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease !important;
 }
 
 .component-card:hover {
@@ -267,23 +270,21 @@ body {
   font-size: 0.9rem;
   margin-bottom: var(--space-md);
 }
-
 .premium-bar {
   width: 100%;
-  height: 10px;
-  background: #e5e7eb;
-  border-radius: var(--radius-sm);
+  height: 6px;
+  background: #1f2933;
+  border-radius: 999px;
   overflow: hidden;
 }
-
 .premium-bar-fill {
-  width: 70%;
+  width: 0; /* IMPORTANT: start at 0 */
   height: 100%;
-  background: var(--color-accent);
-  border-radius: var(--radius-sm);
-  transition: width 0.4s ease;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  border-radius: inherit;
+  transition: width 600ms ease; /* IMPORTANT: animate width */
+  transition: 1s ease-in-out;
 }
-
 /* =========================
    FOOTER
    ========================= */
@@ -293,7 +294,7 @@ body {
   padding: var(--space-xl) 0;
   color: var(--color-muted);
   font-size: 0.9rem;
-  margin-top: var(--space-section); /* grid → footer spacing */
+  margin-top: var(--space-section);
 }
 
 .footer-text {
@@ -329,6 +330,23 @@ body {
 }
 
 /* =========================
+   UNIFIED ANIMATION SYSTEM
+   ========================= */
+
+.animate-init {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.animate-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
 
@@ -341,12 +359,10 @@ body {
     font-size: 1.6rem;
   }
 
-  /* Prevent grid overflow */
   .grid {
     grid-template-columns: 1fr;
   }
 
-  /* Prevent announcement card from forcing overflow */
   .announcement-card {
     grid-column: span 1;
   }
