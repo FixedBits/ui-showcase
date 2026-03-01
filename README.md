@@ -1,15 +1,15 @@
 # UI Showcase
 
-A clean, modern landing page designed to highlight front‑end fundamentals, smooth animations, and intentional UI decisions.  
-This project focuses on layout, spacing, component structure, and subtle motion — the core elements of professional interface design.
+A clean, modern landing page demonstrating front end fundamentals, smooth animations, and intentional UI design. This project highlights layout structure, spacing systems, component hierarchy, and subtle motion as core elements of professional interface work.
 
 ## Features
 
-- Responsive hero section with clean typography
+- Responsive hero section with modern typography
 - Component grid with hover interactions
-- Smooth fade/slide animations triggered on scroll
+- Scroll triggered fade and slide animations
+- Premium analytics card with animated progress bar
 - Consistent spacing, shadows, and visual hierarchy
-- Lightweight, fast, and fully front‑end
+- Lightweight, fast, and fully front end
 
 ## Tech Stack
 
