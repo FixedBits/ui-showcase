@@ -31,3 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Observe scroll-triggered elements
   scrollElements.forEach((el) => observer.observe(el));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("info-modal");
+  const closeBtn = document.querySelector("info-modal");
+  document.querySelectorAll(".card-button");
+});
